@@ -21,3 +21,6 @@ allow sdcardd system_data_file:file r_file_perms;
 
 # Read /data/.layout_version
 allow sdcardd install_data_file:file r_file_perms;
+
+#sdcard isn't being read right so it throws can't read packages list, let's try this 
+allow sdcardd system_data_file:dir read;
