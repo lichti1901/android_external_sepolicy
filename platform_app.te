@@ -27,3 +27,10 @@ allow platform_app media_rw_data_file:file create_file_perms;
 # Write to /cache.
 allow platform_app cache_file:dir create_dir_perms;
 allow platform_app cache_file:file create_file_perms;
+
+#allow drmserver to find
+allow platform_app drmserver_service:service_manager find;
+allow platform_app mediaserver_service:service_manager find;
+allow platform_app radio_service:service_manager find;
+allow platform_app surfaceflinger_service:service_manager find;
+allow platform_app system_server_service:service_manager find;
